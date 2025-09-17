@@ -37,7 +37,7 @@ def convert_episodes(
 
     dataset_manager = DatasetWriter(output_dir, features, config)
 
-    episode_paths = list(episode_dir.rglob("*.mcap"))
+    episode_paths = list(episode_dir.rglob("**/*.mcap"))
     # Sort by creation date (oldest first)
     episode_paths.sort(key=lambda p: p.stat().st_ctime)
 
